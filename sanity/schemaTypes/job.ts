@@ -33,7 +33,6 @@ export default defineType({
       name: "description",
       title: "Job Description",
       type: "text",
-      rows: 3,
       description: "Write a brief description about this role",
     }),
     defineField({
