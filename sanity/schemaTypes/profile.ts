@@ -1,4 +1,4 @@
-import { defineField, defineType } from "sanity";
+import { defineArrayMember, defineField, defineType } from "sanity";
 import { BiUser } from "react-icons/bi";
 
 export default defineType({
@@ -18,7 +18,7 @@ export default defineType({
       title: "Headline",
       type: "string",
       description: "In one short sentence, what do you do?",
-      validation: (Rule) => Rule.required().min(40).max(50),
+      validation: (Rule) => Rule.required().min(40).max(150),
     }),
     defineField({
       name: "profileImage",
@@ -46,7 +46,7 @@ export default defineType({
       name: "fullBio",
       title: "Full Bio",
       type: "array",
-      of: [{ type: "block" }],
+      of: [defineArrayMember({ type: "block" })],
     }),
     defineField({
       name: "resumeURL",
@@ -57,39 +57,29 @@ export default defineType({
       name: "socialLinks",
       title: "Social Links",
       type: "object",
-      description: "Add your social media links:",
       fields: [
-        {
+        defineField({
           name: "github",
           title: "Github URL",
           type: "url",
-          initialValue: "https://github.com/",
-        },
-        {
+        }),
+        defineField({
           name: "linkedin",
           title: "Linkedin URL",
           type: "url",
-          initialValue: "https://linkedin.com/in/",
-        },
-        {
+        }),
+        defineField({
           name: "twitter",
           title: "Twitter URL",
           type: "url",
-          initialValue: "https://twitter.com/",
-        },
+        }),
       ],
-      options: {
-        collapsed: false,
-        collapsible: true,
-        columns: 2,
-      },
     }),
     defineField({
       name: "skills",
       title: "Skills",
       type: "array",
-      description: "Add a list of skills",
-      of: [{ type: "string" }],
+      of: [defineArrayMember({ type: "string" })],
     }),
   ],
 });
