@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getProfile } from "@/sanity/sanity.query";
 import type { ProfileType } from "@/types";
 import HeroSvg from "./icons/HeroSvg";
@@ -40,6 +41,17 @@ export default async function Home() {
                     ))}
                 </ul>
               )}
+            </div>
+          )}
+          {profile?.profileImage && (
+            <div className="relative w-80 h-80 rounded-full overflow-hidden">
+              <Image
+                src={profile.profileImage}
+                alt={profile.fullName}
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           )}
           <HeroSvg />

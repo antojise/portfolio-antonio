@@ -12,9 +12,13 @@ const client = createClient(clientConfig);
 
 export async function getProfile() {
   return client.fetch(
-    groq`*[_type == "profile"][0]`  // [0] pega apenas o primeiro
+    groq`*[_type == "profile"][0]{
+      ...,
+      "profileImage": profileImage.asset->url
+    }`
   );
 }
+
 
 export async function getJob() {
   return client.fetch(
