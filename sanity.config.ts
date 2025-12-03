@@ -8,7 +8,7 @@ export default defineConfig({
   title: "Portfolio Antonio",
   
   projectId: "rswm4klg",
-  dataset: "production",
+  dataset: "production-v2",
   
   basePath: "/studio",
   
