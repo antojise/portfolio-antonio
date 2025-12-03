@@ -4,28 +4,29 @@ export type ProfileType = {
   _id: string;
   fullName: string;
   headline: string;
-  profileImage: {
-    alt: string;
-    image: string;
-  };
+  profileImage?: string; // Mudou aqui - agora é string (URL)
   shortBio: string;
   email: string;
-  fullBio: PortableTextBlock[];
+  fullBio?: PortableTextBlock[];
   location: string;
-  resumeURL: string;
-  socialLinks: string[];
-  skills: string[];
+  resumeURL?: string;
+  socialLinks?: {
+    github?: string;
+    linkedin?: string;
+    twitter?: string;
+  };
+  skills?: string[];
 };
 
 export type JobType = {
   _id: string;
   name: string;
   jobTitle: string;
-  logo: string;
-  url: string;
+  logo?: string;
+  url?: string;
   description: string;
-  startDate: Date;
-  endDate: Date;
+  startDate: string;
+  endDate?: string;
 };
 
 export type ProjectType = {
@@ -37,10 +38,8 @@ export type ProjectType = {
   gap: string;
   solution: string;
   impact: string;
-  technologies: string[];
+  technologies?: string[];
   projectUrl?: string;
-  completionDate: string;
+  completionDate?: string;
   coverImage?: string;
 };
-
-
