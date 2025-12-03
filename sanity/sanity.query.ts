@@ -3,7 +3,7 @@ import groq from "groq";
 
 const clientConfig = {
   projectId: "rswm4klg",
-  dataset: "production",
+  dataset: "production-v2",  
   apiVersion: "2024-12-01",
   useCdn: false,
 };
