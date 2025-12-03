@@ -30,6 +30,10 @@ export default defineType({
           { title: "Automação", value: "automacao" },
           { title: "Business Intelligence", value: "bi" },
           { title: "Gestão de Processos", value: "gestao" },
+          { title: "Desenvolvimento", value: "desenvolvimento" },
+          { title: "Educação e inovação", value: "Educação e inovação" },
+          { title: "Educação e inovação", value: "Educação e inovação" },
+          
         ],
       },
       validation: (rule) => rule.required(),
