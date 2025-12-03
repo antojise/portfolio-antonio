@@ -32,7 +32,6 @@ export default defineType({
           { title: "Gestão de Processos", value: "gestao" },
           { title: "Desenvolvimento", value: "desenvolvimento" },
           { title: "Educação e inovação", value: "Educação e inovação" },
-          { title: "Educação e inovação", value: "Educação e inovação" },
           
         ],
       },
