@@ -26,19 +26,11 @@ export default defineType({
       type: "image",
       description: "Upload a profile picture",
       options: { hotspot: true },
-      fields: [
-        {
-          name: "alt",
-          title: "Alt",
-          type: "string",
-        },
-      ],
     }),
     defineField({
       name: "shortBio",
       title: "Short Bio",
       type: "text",
-      rows: 4,
     }),
     defineField({
       name: "email",
