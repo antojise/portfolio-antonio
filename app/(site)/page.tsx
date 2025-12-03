@@ -43,18 +43,17 @@ export default async function Home() {
               )}
             </div>
           )}
-          {profile?.profileImage && (
-            <div className="relative w-80 h-80 rounded-full overflow-hidden">
-              <Image
-                src={profile.profileImage}
-                alt={profile.fullName}
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-          )}
-          <HeroSvg />
+              {profile?.profileImage && (
+                <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-purple-500/20">
+                  <Image
+                    src={profile.profileImage}
+                    alt={profile.fullName || "Profile"}
+                    fill
+                    className="object-cover object-center scale-110"
+                    priority
+                  />
+                </div>
+              )}
         </div>
       </section>
 
