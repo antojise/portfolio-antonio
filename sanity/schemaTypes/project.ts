@@ -65,12 +65,13 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
 
-    defineField({
-      name: "technologies",
-      title: "Tecnologias",
-      type: "array",
-      of: [{ type: "string" }],
-    }),
+{
+  name: "technologies",
+  title: "Tecnologias",
+  type: "array",
+  of: [{ type: "string" }],
+},
+
 
     defineField({
       name: "projectUrl",
