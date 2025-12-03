@@ -8,9 +8,9 @@ export default function Certifications() {
   ];
 
   const awards = [
-    { title: "Vencedor Bootcamp 'Adoradores de Startups'", year: "2024" },
+    { title: "Vencedor Bootcamp 'Adoradores de Startups'", year: "2025" },
     { title: "Vencedor Desafio Mulvi - Hackathon", year: "2024" },
-    { title: "Voluntário Agile Brazil 2024", year: "2024" }
+    { title: "Time tático Agile Brazil 2024", year: "2024" }
   ];
 
   return (
